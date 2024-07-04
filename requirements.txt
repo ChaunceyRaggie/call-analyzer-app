@@ -2,3 +2,4 @@ streamlit
 openai-whisper
 pydantic
 langchain
+langchain_community
