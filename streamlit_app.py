@@ -9,8 +9,10 @@ from get_summary import get_call_summary
 st.title("Call Detail Extractor")
 
 # Set the path to the FFmpeg executable
-ffmpeg_path = r"C:\ffmpeg\bin\ffmpeg.exe" 
-os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
+# ffmpeg_path = r"C:\ffmpeg\bin\ffmpeg.exe" 
+# os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
+# Adjust the path to ffmpeg
+os.environ['FFMPEG_BINARY'] = 'ffmpeg'
 
 # upload audio file with streamlit
 audio_file = st.file_uploader("Upload Audio", type=["wav", "mp3", "m4a"])
